@@ -1,0 +1,46 @@
+{
+  "name": "eth-gas-tracker",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "prebuild": "yarn db:generate",
+    "build": "next build",
+    "start": "next start",
+    "db:generate": "prisma generate --schema=src/db/schema.prisma && prisma db push --schema src/db/schema.prisma",
+    "db:studio": "prisma studio --schema src/db/schema.prisma",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.14.0",
+    "@supabase/supabase-js": "^2.39.7",
+    "@tanstack/react-query": "^5.24.1",
+    "apexcharts": "^3.46.0",
+    "dayjs": "^1.11.10",
+    "frog": "latest",
+    "hono": "^4.0.10",
+    "next": "14.1.0",
+    "next-plausible": "^3.12.0",
+    "react": "^18",
+    "react-apexcharts": "^1.4.1",
+    "react-dom": "^18",
+    "viem": "^2.7.16"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.10",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.0.1",
+    "cross-fetch": "^4.0.0",
+    "daisyui": "^4.7.2",
+    "dotenv": "^16.4.5",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.0",
+    "postcss": "^8",
+    "prisma": "^5.14.0",
+    "tailwindcss": "^3.3.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5"
+  }
+}
